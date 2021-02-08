@@ -1,19 +1,29 @@
 #!/bin/bash -x
+ no =$1
+length=$2
+feet_to_inch=1;
+feet_to_meter=2;
+inch_to_feet=3;
+meter_to_feet=4;
 
-echo "enter the value of feet"
-echo "enter the value of meter"
-echo "enter the value of inches"
-read n
-case $n in
-   1) echo -n "in=ft*in"
-           ;;
-   2)echo -n "ft=in*ft"
-           ;;
-   3)echo -n"m=ft/*m"
-           ;;
-   4)echo -n "ft=m/*ft"
-            ;;
-         *)
-      esac
+case $length in
+	$feet_to_inch)
+		inch=$(($no*12))
+		echo $inch
+			;;
+	$feet_to_meter)
+		meter=$(($no/3))
+		echo $meter
+			;;
+	$inch_to_feet)
+		feet=$(($no/12))
+		echo $feet
+			;;
+	$meter_to_feet)
+		feet=$(($no*3))
+		echo $feet
+			;;
+	*)
 
+esac
 

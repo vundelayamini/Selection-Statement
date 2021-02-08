@@ -4,16 +4,16 @@ a=10;
 b=20;
 c=12;
 
-if [ $a + $b *$c ]
+if [ 10 + 20 *12 ]
 then
     echo" true"
-elif [ $c + $a / $b ]
+elif [ 12 + 10 / 20 ]
 then
     echo "true"
-elif [ $a % $b + $c ]
+elif [ 10 % 20 + 12 ]
 then
      echo"true"
-elif [ $a * $b + $c]
+elif [ 10 * 20 + 12]
 then
      echo "true"
 fi
