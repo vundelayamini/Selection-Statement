@@ -1,21 +1,23 @@
 #!/bin/bash -x
 
-a=10;
-b=20;
-c=12;
+read -p "enter the value of a::"a
+read -p "enter the value of b::"b
+read -p "enter the value of c::"c
 
-if [  ]
+result=$($a+$b*$c -a $a%$b+$c -a $c+$a\$c -a $a*$b+$c )
+echo $result
+if [ $a+$b*$c ]
 then
-    echo" true"
-elif [ 12 + 10 / 20 ]
+    echo $result
+elif [$a%$b+$c ]
 then
-    echo "true"
-elif [ 10 % 20 + 12 ]
+    echo $result
+elif [ $c+$a/$c ]
 then
-     echo"true"
-elif [ 10 * 20 + 12]
+     echo$result
+elif [$a*$b+$c ]
 then
-     echo "true"
+    echo $result
+else
+     echo"to check maximum or minimum value"
 fi
-echo "false"
-
