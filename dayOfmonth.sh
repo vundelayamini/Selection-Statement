@@ -1,33 +1,15 @@
 #!/bin/bash -x
 
-a=$Month
-b=$Date
+read -p " Enter Date:-" date
+read -p " Enter Month:-" Month
 
-if [ $Month -eq "March" ]
-then
-     isMonth=3
-elif [ $Month -eq "April" ]
-then
-     isMonth=4
-elif [ $Month -eq "May" ]
-then
-     isMonth=5
-elif [ $Month -eq "June" ]
-then
-      isMonth=6
-fi
-
-if [ $Month -gt 3 -a $Date -lt 6 ]
-then
-      echo "true"
-elif [$Month -eq 3 -a $Date -ge 20 ]
-then
-     echo "True"
-elif [$Month -eq 6 -a $Date -le 20 ]
+if (( ($Month <= 6 && $date <= 20) && (($Month >= 3 && $date <= 20) && ($date<31)) ))
 then
        echo "True"
 else
-       echo "False"
+
+        echo "False"
 fi
-      
+
+
 

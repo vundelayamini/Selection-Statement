@@ -1,10 +1,11 @@
 #!/bin/bash -x
 
-flip=$((( $RANDOM%10 )%2))
+flipCoin=$(($RANDOM%2))
+isHeads=1
 
-if [ $flip -eq 1 ]
+if [ $flipCoin -eq $isHeads ]
 then
-     echo" heads=0 "$heads
+     echo HEADS
 else
-     echo "tails=1"$tails
+     echo TAILS
 fi
