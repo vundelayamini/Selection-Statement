@@ -1,5 +1,6 @@
 #!/bin/bash -x
- no =$1
+
+num=$1
 length=$2
 feet_to_inch=1;
 feet_to_meter=2;
@@ -8,22 +9,23 @@ meter_to_feet=4;
 
 case $length in
 	$feet_to_inch)
-		inch=$(($no*12))
+		inch=$(($num*12))
 		echo $inch
 			;;
 	$feet_to_meter)
-		meter=$(($no/3))
+		meter=$(($num /3 ))
 		echo $meter
 			;;
 	$inch_to_feet)
-		feet=$(($no/12))
+		feet=$(($num / 12 ))
 		echo $feet
 			;;
 	$meter_to_feet)
-		feet=$(($no*3))
+		feet=$(($num * 3))
 		echo $feet
 			;;
 	*)
+      echo "false"
 
 esac
 

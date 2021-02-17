@@ -1,29 +1,29 @@
-#!/bin/bash -x
+#!/bin/bash 
 
-read -p "enter week numbers "
-week=$(echo $n wc -c )
+read -p "enter the number" number
+echo $number
 
-if [ $week -ge 1 ]
+if (( $number == 1 ))
 then
-    echo "MonDay"
-elif [ $week -ge 2 ]
+        echo "MONDAY"
+elif (( $number == 2 ))
 then
-    echo "TuesDay"
-elif [ $week -ge 3 ]
+        echo "TUESDAY"
+elif (( $number == 3 ))
 then
-    echo"WednesDay"
-elif [ $week -ge 4 ]
+        echo "WEDNESDAY"
+elif (( $number == 4 ))
 then
-     echo"ThursDay"
-elif [ $week -ge 5 ]
+        echo "THURSDAY"
+elif (( $number == 5 ))
 then
-     echo "FriDay"
-elif [ $week -ge 6 ]
+        echo"FRIDAY"
+elif (( $number == 6 ))
 then
-     echo"SaturDay"
-elif [ $week -ge 7 ]
+        echo "SATURDAY"
+elif (( $number == 7 ))
 then
-    echo"SunDay"
+        echo "SUNDAY"
 else
-    echo "false"
+	echo "false"
 fi

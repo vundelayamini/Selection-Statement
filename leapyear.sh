@@ -1,12 +1,13 @@
 #!/bin/bash -x
 
-echo "enter a year to check-"
+echo "enter the year : "
 read y
-year=$y
-ans= `expr $ans -eq % 4`
-if [ $ans -eq 1 ]
+
+ans=`expr $y  % 4`
+
+if [ $ans -eq 0 ]
 then
-     echo"its a leap year"
+     echo"leap year"
 else
-     echo "not a leap year"
+     echo "is not a leap year"
 fi
