@@ -1,28 +1,28 @@
 #!/bin/bash -x
+read -p "enter the nubers :"num
+echo $num
 
-num=$1
-
-if [ $num -lt 1 ]
-         then
-             echo"Unit"
-elif [ $num -lt 10 ]
+if (( $num >= 1 ))
+   then
+       echo"unit"
+elif [ $num >= 10 ]
     then
-     echo "Ten"
-elif [ $num -lt 100 ]
+     echo "ten"
+elif [ $num >= 100 ]
     then
-         echo" Hundred"
-elif [ $num -lt 1000 ]
+         echo" hundred"
+elif [ $num >= 1000 ]
      then
-           echo"Thousand"
-elif [ $num -lt 10000 ]
+           echo"thousand"
+elif [ $num >= 10000 ]
       then
-           echo" Ten Thousand"
-elif [ $num -lt 100000 ]
+           echo" ten thousand"
+elif [ $num >= 100000 ]
       then
-          echo "One Laksh"
-elif [ $num -lt 1000000 ]
+          echo "one laksh"
+elif [ $num >= 1000000 ]
        then
-            echo"Ten Laksh"
+            echo"ten laksh"
 else
-      echo"display in words:"
+      echo"false"
 fi
